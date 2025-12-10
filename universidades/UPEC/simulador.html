@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador UPEC - Sparta Academy</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/simulador.css">
+</head>
+<body>
+    <header>
+        <div class="header-content" id="headerContent">
+            <a href="../../index.html" class="brand-container">
+                <img src="../../assets/logos/sparta-logo.png" alt="Sparta Academy" class="header-logo">
+                <span class="brand-text">PREUNIVERSITARIO SPARTA</span>
+            </a>
+
+            <div class="header-right">
+                <div class="user-info" id="userInfo">
+                    <span class="student-label">Estudiante:</span>
+                    <span id="userName" class="student-name"></span>
+                    <button id="btnVolver" class="btn-header">Volver al Inicio</button>
+                    <button id="btnLogout" class="btn-header">Cerrar Sesión</button>
+                </div>
+
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menú">
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="simulador-container">
+        <section class="simulador-header">
+            <div class="simulador-logo-wrapper">
+                <div class="simulador-logo-ring">
+                    <img src="../../assets/logos/upec.png" alt="UPEC" class="simulador-logo" id="uniLogo">
+                </div>
+            </div>
+            <div class="simulador-info">
+                <h1 id="simuladorTitulo">Simuladores Sparta Academy – UPEC</h1>
+                <p id="simuladorSubtitulo">Universidad Politécnica Estatal del Carchi</p>
+            </div>
+        </section>
+
+        <section class="materia-selector" id="materiaSelector">
+            <h2>Selecciona la Materia</h2>
+            <p class="materia-subtitle">Elige la materia que deseas practicar en este simulador</p>
+            <div class="materia-grid" id="materiaGrid"></div>
+        </section>
+
+        <section class="instrucciones" id="instrucciones">
+            <h2 id="materiaNombre"></h2>
+            <h3>Instrucciones del Examen</h3>
+            <ul id="listaInstrucciones">
+                <li>El examen consta de <strong id="numPreguntas">50</strong> preguntas de selección múltiple.</li>
+                <li>Tienes 1 hora (60 minutos) para completar el examen.</li>
+                <li>Una vez que pases a la siguiente pregunta, no podrás regresar.</li>
+                <li>Al finalizar el tiempo, el examen se cerrará automáticamente.</li>
+                <li>Asegúrate de responder todas las preguntas antes de terminar.</li>
+                <li>El puntaje se calcula sobre 1000 puntos.</li>
+            </ul>
+            <button class="btn-comenzar" id="btnComenzar"><span>Comenzar Examen</span></button>
+        </section>
+
+        <section class="examen-layout" id="examenLayout">
+            <div class="examen-main">
+                <div class="pregunta-actual" id="preguntaActual"></div>
+                <button class="btn-siguiente" id="btnSiguiente"><span>Siguiente</span></button>
+            </div>
+
+            <aside class="examen-sidebar">
+                <div class="cronometro-card">
+                    <div class="cronometro-label">TIEMPO RESTANTE</div>
+                    <div class="cronometro-tiempo" id="cronometro">60:00</div>
+                </div>
+
+                <div class="preguntas-navegacion">
+                    <h3>Preguntas</h3>
+                    <div class="preguntas-grid" id="preguntasGrid"></div>
+                </div>
+
+                <!-- BOTÓN TERMINAR INTENTO (SIEMPRE VISIBLE) -->
+                <button class="btn-terminar-intento" id="btnTerminarAhora">Terminar Intento</button>
+            </aside>
+        </section>
+
+        <section class="resultados-container" id="resultadosContainer">
+            <h1>Examen Completado</h1>
+            <div class="puntaje-final" id="puntajeFinal"></div>
+            <div class="estadisticas" id="estadisticas"></div>
+            <div class="revision-section">
+                <h3>Revisión de Preguntas</h3>
+                <div id="revisionPreguntas"></div>
+            </div>
+            <div class="resultados-actions">
+                <button class="btn-comenzar" id="btnOtroIntento"><span>Realizar Otro Intento</span></button>
+                <button class="btn-header btn-volver-peque" id="btnVolverInicio">Volver al Inicio</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL CONFIRMAR TERMINAR EXAMEN -->
+    <div class="modal-overlay" id="modalConfirmar">
+        <div class="modal-card">
+            <div class="modal-icon-circle modal-icon-warning">
+                <span>!</span>
+            </div>
+            <h2>¿Terminar el intento?</h2>
+            <p>Si terminas ahora, se guardarán tus respuestas y ya no podrás modificar el examen.</p>
+            <div class="modal-actions">
+                <button class="btn-modal-secundario" id="btnCancelarTerminar">Seguir resolviendo</button>
+                <button class="btn-modal-primario" id="btnConfirmarTerminar">Sí, terminar examen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../js/supabase-client.js"></script>
+    <script src="simulador.js"></script>
+</body>
+</html>
