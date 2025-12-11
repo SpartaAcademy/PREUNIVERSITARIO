@@ -8,6 +8,14 @@
         "universidades_acceso": ["EPN", "UCE", "ESPE", "UNACH", "UTC", "UTN", "YACHAY"]
     },
     {
+        "usuario": "grupon",
+        "contrasena": "grupon",
+        "nombre": "Normativas",
+        "rol": "admin",
+        "ciudad": "Tulcán",
+        "universidades_acceso": ["EPN", "UCE", "ESPE", "UNACH", "UTC", "UTN", "YACHAY"]
+    },
+    {
         "usuario": "profe",
         "contrasena": "profe",
         "nombre": "Iván Narvaez",
