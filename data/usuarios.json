@@ -8,12 +8,12 @@
         "universidades_acceso": ["EPN", "UCE", "ESPE", "UNACH", "UTC", "UTN", "YACHAY"]
     },
     {
-        "usuario": "grupon",
-        "contrasena": "grupon",
-        "nombre": "Normativas",
+        "usuario": "sebas216.215@gmail.com",
+        "contrasena": "root",
+        "nombre": "Sebastian Paucar",
         "rol": "admin",
         "ciudad": "Tulcán",
-        "universidades_acceso": ["EPN", "UCE", "ESPE", "UNACH", "UTC", "UTN", "YACHAY"]
+        "universidades_acceso": ["UCE", "ESPE", "UNACH", "UTC", "UTN", "YACHAY"]
     },
     {
         "usuario": "profe",
