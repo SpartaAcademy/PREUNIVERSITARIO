@@ -24,8 +24,8 @@
         "universidades_acceso": ["EPN", "UCE", "ESPE", "UNACH", "UTC", "UTN", "YACHAY"]
     },
     {
-        "usuario": "jennifer_tulcan",
-        "contrasena": "jennifer_tulcan",
+        "usuario": "aspirante",
+        "contrasena": "aspirante",
         "nombre": "Jennifer Tulcán",
         "rol": "estudiante",
         "ciudad": "Tulcán",
